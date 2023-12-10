@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseClicked="#setflip" onMousePressed="#extendStick" onMouseReleased="#releaseStick" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Game">
+   <children>
+      <Rectangle fx:id="pillar2" arcHeight="5.0" arcWidth="5.0" fill="#0b0b0b" height="144.0" layoutY="257.0" stroke="BLACK" strokeType="INSIDE" translateX="422.0" width="133.0" />
+      <Rectangle fx:id="pillar1" arcHeight="5.0" arcWidth="5.0" fill="#000305" height="144.0" layoutY="257.0" stroke="BLACK" strokeType="INSIDE" width="72.0" />
+      <Rectangle fx:id="center2" arcHeight="5.0" arcWidth="5.0" fill="#ef3d0c" height="7.0" layoutY="256.6" stroke="BLACK" strokeType="INSIDE" translateX="482.5" width="12.0" />
+      <Line fx:id="mystick" endX="100.0" endY="10.0" layoutY="249.5" startX="100.0" startY="10.0" strokeWidth="5.0" translateX="-31.0" />
+      <Rectangle fx:id="pillar3" arcHeight="5.0" arcWidth="5.0" fill="#0b0b0b" height="144.0" layoutY="257.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="133.0" />
+      <ImageView fx:id="i1" fitHeight="150.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" translateX="29.0" translateY="220.0">
+         <image>
+            <Image url="@still.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="i2" fitHeight="150.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" translateY="220.0" visible="false">
+         <image>
+            <Image url="@move1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="i3" fitHeight="150.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" translateY="220.0" visible="false">
+         <image>
+            <Image url="@move2.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="anchorpane1" layoutX="254.0" layoutY="13.0" prefHeight="60.0" prefWidth="72.0" style="-fx-background-color: red;">
+         <children>
+            <Text fx:id="score" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="5.0" text="0" textAlignment="CENTER" wrappingWidth="33.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="555.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cherries.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="cherryscore" layoutX="520.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="23.73675537109375">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="cherry" fitHeight="30.0" fitWidth="24.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@cherries.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="anchorpane" layoutX="161.0" prefHeight="218.0" prefWidth="258.0" visible="false">
+         <children>
+            <Button layoutX="6.0" layoutY="170.0" mnemonicParsing="false" onAction="#HomeSwitch" text="HOME" />
+            <Button layoutX="95.0" layoutY="170.0" mnemonicParsing="false" onAction="#playagain" prefHeight="26.0" prefWidth="51.0" text="Play" />
+            <Button layoutX="187.0" layoutY="170.0" mnemonicParsing="false" onAction="#revive" text="Revive" />
+            <Text layoutX="6.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Highest    Score" wrappingWidth="88.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="165.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Score" wrappingWidth="72.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="high" layoutX="13.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="low" layoutX="175.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" layoutX="116.0" layoutY="163.0" visible="false" />
+
+   </children>
+</AnchorPane>
